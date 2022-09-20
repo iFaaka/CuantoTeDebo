@@ -1,0 +1,17 @@
+.welcome-section {
+    background-color: #FFF500;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: Chakra Petch;
+    margin-top: 50vh;
+}
+
+.intro-section {
+    margin-bottom: 4vh;
+}
