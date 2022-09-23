@@ -1,7 +1,7 @@
 import React from "react";
 import { Triangle } from "../Helpers/Triangle";
-import "./stylesheets/CuantoPusieron.css";
-export const CuantoPusieron = () => {
+import "./stylesheets/MemberList.css";
+export const MemberList = () => {
   return (
     <div id="integ-section">
       <div id="integ-head-section">

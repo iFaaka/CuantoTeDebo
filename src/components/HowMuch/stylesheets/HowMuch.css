@@ -1,0 +1,63 @@
+.howm-container {
+  height: 100vh;
+  margin-top: 4vh;
+  background-color: #ffffff;
+  font-family: "Chakra Petch";
+  font-style: normal;
+  font-weight: 500;
+}
+
+.howm-header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.howm-header-title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 47px;
+  letter-spacing: 0.16em;
+}
+
+.howm-header-price-container {
+  display: flex;
+  gap: 3vh;
+  font-size: 36px;
+  line-height: 47px;
+  align-items: center;
+}
+
+.howm-header-input {
+  background-color: #d9d9d9;
+  border-radius: 18px;
+  width: 237px;
+  height: 67px;
+}
+
+.howm-bottom-container {
+  background: #fff500;
+  padding-top: 5vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.howm-bottom-title {
+  font-size: 36px;
+  width: 70%;
+  letter-spacing: 0.16em;
+  padding-left: 3vh;
+}
+
+.howm-bottom-text {
+  font-size: 20px;
+  padding-bottom: 10vh;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.16em;
+  text-align: center;
+}

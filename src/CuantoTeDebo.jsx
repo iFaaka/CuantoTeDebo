@@ -1,10 +1,17 @@
 import React from "react";
 import "../src/CuantoTeDebo.css";
-import { CuantoPusieron } from "./components/CuantoPusieron/CuantoPusieron";
+import { MemberList } from "./components/MemberList/MemberList";
 import { Triangle } from "./components/Helpers/Triangle";
 import { Intro } from "./components/Intro/Intro";
+import { HowMuch } from "./components/HowMuch/HowMuch";
+import { useState } from "react";
 
 export const CuantoTeDebo = () => {
+
+  const [amountPeople, setAmountPeople] = useState(1)
+  const [totalAmount, setTotalAmount] = useState(1)
+  const [members, setMembers] = useState(['dsadsa'])
+
   return (
     <div className="main-app">
       <div className="welcome-section">
@@ -13,11 +20,20 @@ export const CuantoTeDebo = () => {
       </div>
 
       <div className="intro-section">
-        <Intro />
+        <Intro setAmountPeople={setAmountPeople} />
       </div>
 
+     
+      <div>
+      {amountPeople != '' && <HowMuch setTotalAmount={setTotalAmount}/>}
+      </div>
+      
       <div className="totalmoney-section">
-        <CuantoPusieron />
+      {totalAmount != '' && <MemberList />}
+      </div>
+
+      <div>
+        {members.length > 0 && console.log('cargando')}
       </div>
     </div>
   );
