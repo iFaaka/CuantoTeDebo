@@ -19,7 +19,7 @@ h2 {
     mix-blend-mode: darken;
 }
 
-.howmany-section {
+.intro-container {
     margin-top: 6vh;
     background: #FFF500;
     border-top-left-radius: 30px;
@@ -32,7 +32,7 @@ h2 {
 }
 
 
-#howmany-manito {
+#intro-manito {
     font-family: 'Chakra Petch';
     font-style: normal;
     font-weight: 600;
@@ -43,16 +43,16 @@ h2 {
     margin-top: 1vh;
 }
 
-#howmany-img-container {
+#intro-img-container {
     height: 20vh;
 }
 
-#howmany-img {
+#intro-img {
     height: 100%;
     margin: auto;
 }
 
-#howmany-how {
+#intro-how {
     font-family: 'Chakra Petch';
     font-style: normal;
     font-weight: 500;
@@ -64,7 +64,7 @@ h2 {
 
 }
 
-#howmany-input-container {
+#intro-input-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +73,7 @@ h2 {
 
 }
 
-#howmany-input {
+#intro-input {
     width: 100px;
     height: 54px;
     background: #FFFFFF;

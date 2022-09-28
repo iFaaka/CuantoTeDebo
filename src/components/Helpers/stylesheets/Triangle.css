@@ -9,3 +9,8 @@
 .white {
     border-left: 30px solid #ffffff !important;
 }
+
+.right {
+    transform: rotate(0);
+    bottom: 0;
+}

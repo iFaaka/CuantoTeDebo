@@ -1,40 +1,32 @@
-import React from "react";
+import { GetData } from "./components/GetData/GetData";
 import "../src/CuantoTeDebo.css";
-import { MemberList } from "./components/MemberList/MemberList";
-import { Triangle } from "./components/Helpers/Triangle";
-import { Intro } from "./components/Intro/Intro";
-import { HowMuch } from "./components/HowMuch/HowMuch";
 import { useState } from "react";
-
+import { GetResult } from "./components/GetResult/GetResult";
 export const CuantoTeDebo = () => {
+  const [amountPeople, setAmountPeople] = useState([]);
+  const [totalAmount, setTotalAmount] = useState("");
+  const [members, setMembers] = useState([]);
+  const [showWindow, setShowWindow] = useState(0);
 
-  const [amountPeople, setAmountPeople] = useState(1)
-  const [totalAmount, setTotalAmount] = useState(1)
-  const [members, setMembers] = useState(['dsadsa'])
+  console.log(members);
+  let fragment;
+  if (showWindow === 0) {
+    fragment = (
+      <GetData
+        setAmountPeople={setAmountPeople}
+        setMembers={setMembers}
+        totalAmount={totalAmount}
+        setTotalAmount={setTotalAmount}
+        amountPeople={amountPeople}
+        setShowWindow={setShowWindow}
+      />
+    );
+  }
 
-  return (
-    <div className="main-app">
-      <div className="welcome-section">
-        <h1>¿Cuanto te debo..?</h1>
-        <Triangle id="welcome-triangle" />
-      </div>
-
-      <div className="intro-section">
-        <Intro setAmountPeople={setAmountPeople} />
-      </div>
-
-     
-      <div>
-      {amountPeople != '' && <HowMuch setTotalAmount={setTotalAmount}/>}
-      </div>
-      
-      <div className="totalmoney-section">
-      {totalAmount != '' && <MemberList />}
-      </div>
-
-      <div>
-        {members.length > 0 && console.log('cargando')}
-      </div>
-    </div>
-  );
+  if (showWindow === 1) {
+    fragment = (
+      <GetResult resto={totalAmount / amountPeople} members={members} />
+    );
+  }
+  return <>{fragment}</>;
 };

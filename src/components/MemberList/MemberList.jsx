@@ -1,7 +1,12 @@
 import React from "react";
-import { Triangle } from "../Helpers/Triangle";
+import { ListMember } from "./ListMember";
 import "./stylesheets/MemberList.css";
-export const MemberList = () => {
+export const MemberList = ({
+  setMembers,
+  totalAmount,
+  amountPeople,
+  setShowWindow,
+}) => {
   return (
     <div id="integ-section">
       <div id="integ-head-section">
@@ -11,32 +16,13 @@ export const MemberList = () => {
         </div>
 
         <div id="integ-input-section">
-          <div className="integ-input-group">
-            <input type="text" className="integ-input-name" />
-            <input type="text" className="integ-input-amount" />
-          </div>
-          <div className="integ-input-group">
-            <input type="text" className="integ-input-name" />
-            <input type="text" className="integ-input-amount" />
-          </div>
-          <div className="integ-input-group">
-            <input type="text" className="integ-input-name" />
-            <input type="text" className="integ-input-amount" />
-          </div>
-          <div className="integ-input-group">
-            <input type="text" className="integ-input-name" />
-            <input type="text" className="integ-input-amount" />
-          </div>
-          <div className="integ-input-group">
-            <input type="text" className="integ-input-name" />
-            <input type="text" className="integ-input-amount" />
-          </div>
+          <ListMember
+            setMembers={setMembers}
+            totalAmount={totalAmount}
+            amountPeople={amountPeople}
+            setShowWindow={setShowWindow}
+          />
         </div>
-      </div>
-      <div id="integ-rest-section">
-        <span id="integ-rest-title">Para llegar al total faltan:</span>
-        <span id="integ-rest-amount">$000</span>
-        <Triangle changeColor="white" />
       </div>
     </div>
   );
